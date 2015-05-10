@@ -1,4 +1,4 @@
-(defproject astar "0.1.0"
+(defproject astar-search "0.1.0"
   :description "Pathfinding using A* algorithm"
   :url "https://github.com/arttuka/astar"
   :license {:name "Eclipse Public License"
