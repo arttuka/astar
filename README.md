@@ -7,15 +7,19 @@ Latest releaese is [0.1.0]
 
 [Leiningen](https://github.com/technomancy/leiningen) dependency information:
 
-    [astar-search "0.1.0"]
+```clojure
+[astar-search "0.1.0"]
+```
 
 [Maven](http://maven.apache.org/) dependency information:
 
-    <dependency>
-      <groupId>astar-search</groupId>
-      <artifactId>astar-search</artifactId>
-      <version>0.1.0</version>
-    </dependency>
+```xml
+<dependency>
+  <groupId>astar-search</groupId>
+  <artifactId>astar-search</artifactId>
+  <version>0.1.0</version>
+</dependency>
+```
 
 ## Usage
 
@@ -23,7 +27,7 @@ Latest releaese is [0.1.0]
 
 * `graph`, which is a function (eg. a map) from a node to all neighbors of that node.
 
-```
+```clojure
 user=> (def graph {:a [:b :c]
                    :b [:a :d :e]
                    :c [:a :d :e]
@@ -35,7 +39,7 @@ user=> (def graph {:a [:b :c]
 
 * `dist`, which is a function from two nodes to the distance (as a number) from the first node to the second.
 
-```
+```clojure
 user=> (defn dist [from to]
          (let [d {:a {:b 4 :c 2}
                   :b {:a 4 :d 1 :e 1}
@@ -49,7 +53,7 @@ user=> (defn dist [from to]
 
 * `h`, which is a function from a node to the heuristic distance from that node to the goal. It should never overestimate the distance. If it does, the algorithm isn't guaranteed to find the optimal solution.
 
-```
+```clojure
 user=> (def h {:a 7
                :b 3
                :c 6
@@ -64,7 +68,7 @@ user=> (def h {:a 7
 
 It returns a list of nodes that form the shortest path from the start node (exclusive) to the goal node (inclusive).
 
-```
+```clojure
 user=> (require 'astar.core)
 nil
 user=> (astar.core/route graph dist h :a :f)
