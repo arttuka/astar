@@ -1,6 +1,7 @@
 (ns astar.core-test
-  (:require [clojure.test :refer :all]
-            [astar.core :refer :all]))
+  (:require #?(:clj  [clojure.test :refer [deftest is]]
+               :cljs [cljs.test :refer-macros [deftest is]])
+            [astar.core :refer [route]]))
 
 (def graph {:a [:b :c]
             :b [:a :d :e]
