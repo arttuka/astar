@@ -1,5 +1,6 @@
 (ns astar.core
-  (:require [clojure.data.priority-map :refer [priority-map-keyfn]]))
+  (:require #?(:clj  [clojure.data.priority-map :refer [priority-map-keyfn]]
+               :cljs [tailrecursion.priority-map :refer [priority-map-keyfn]])))
 
 (defn ^:private generate-route [node came-from]
   (loop [route '()
