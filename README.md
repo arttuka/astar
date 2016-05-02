@@ -3,12 +3,12 @@ Pathfinding using A* algorithm
 
 ## Releases and Dependency Information
 
-Latest release is [0.1.1]
+Latest release is [0.2]
 
 [Leiningen](https://github.com/technomancy/leiningen) dependency information:
 
 ```clojure
-[astar-search "0.1.1"]
+[astar-search "0.2"]
 ```
 
 [Maven](http://maven.apache.org/) dependency information:
